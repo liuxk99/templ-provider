@@ -4,9 +4,14 @@
     <application
         android:icon="@drawable/app_icon"
         android:label="@string/app_label">
+        <!-- You don't need to include android:required="false" if your app's
+             minSdkVersion is 28 or higher. -->
+        <uses-library android:name="android.test.runner"
+            android:required="false" />
+
         <provider
             android:name="com.sj.providers.templ.TemplatesProvider"
-            android:authorities="shy.luo.providers.articles"
+            android:authorities="com.sj.providers.Templates"
             android:label="@string/provider_label"
             android:multiprocess="false"></provider>
     </application>
