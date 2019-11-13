@@ -1,12 +1,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="com.sj.providers.templ">
+    package="com.sj.providers.templ">
+
     <application
-        android:label="@string/app_label"
-        android:icon="@drawable/app_icon">
-        <provider android:name="com.sj.providers.templ.TemplatesProvider"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_label">
+        <provider
+            android:name="com.sj.providers.templ.TemplatesProvider"
             android:authorities="shy.luo.providers.articles"
             android:label="@string/provider_label"
-            android:multiprocess="false">
-        </provider>
+            android:multiprocess="false"></provider>
     </application>
 </manifest>
