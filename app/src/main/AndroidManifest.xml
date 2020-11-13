@@ -2,6 +2,7 @@
     package="com.sj.providers.templ">
 
     <application
+        android:name=".MyApp"
         android:icon="@drawable/app_icon"
         android:label="@string/app_label">
         <!-- You don't need to include android:required="false" if your app's
@@ -14,5 +15,12 @@
             android:authorities="com.sj.providers.Templates"
             android:label="@string/provider_label"
             android:multiprocess="false"></provider>
+
+        <receiver android:name="BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TEST"/>
+            </intent-filter>
+        </receiver>
     </application>
 </manifest>
