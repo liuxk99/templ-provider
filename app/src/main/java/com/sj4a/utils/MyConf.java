@@ -3,6 +3,8 @@ package com.sj4a.utils;
 import android.content.Context;
 import android.util.Log;
 
+import com.sj.providers.templ.Decompress;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -41,6 +43,10 @@ public class MyConf {
             Log.d(TAG, "assets: " + srcFile);
             copyAssetsFile(context, srcFile, dstFile);
         }
+
+        final File dbFile = context.getDatabasePath("xxx.db");
+        final String dbDir = dbFile.getParent();
+        Decompress.unzipFromAssets(context, "panda.zip", dbDir);
     }
 
     public static void copyAssetsFile(Context context, String srcFile, File dstFile) {
